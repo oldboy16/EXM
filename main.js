@@ -3,14 +3,14 @@ var elText = document.querySelector(".text")
 function fn(){
     var inp = elInp.value 
     var text = elText.value
-    if (inp != inp.toUpperCase()){
-        elText.textContent = "Faqatgina katta harf kiriting !"
-        elText.style.color = "red"
-        elInp.style.borderBottom = "2px solid red"
-    }else if (inp == inp.toUpperCase()){
-        elText.textContent = "Togri kiritdingiz !"
+    if (inp != inp.toLowerCase()){
+        elText.textContent = "Tasdiqlandi!"
         elText.style.color = "green"
         elInp.style.borderBottom = "2px solid green"
+    }else{
+        elText.textContent = "Katta harf kiriting!"
+        elText.style.color = "red"
+        elInp.style.borderBottom = "2px solid red"
+        elInp.value = ""
     }
-    elInp.value = ""
 }
